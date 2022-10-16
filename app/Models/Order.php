@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\OrderItems;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,7 +23,10 @@ class Order extends Model
         'state',
         'pincode',
         'status',
-        'message',
+        'total_price',
         'user_id'
     ];
+    public function orderItems(){
+        return $this->hasMany(OrderItems::class);
+    }
 }

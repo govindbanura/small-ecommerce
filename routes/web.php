@@ -31,5 +31,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/Cart/{id}', [App\Http\Controllers\CartController::class, 'destroy'] )->name('deleteItem');
     Route::get('/placeOrder', [App\Http\Controllers\OrderController::class, 'view_checkout_page'])->name('checkout');
     Route::post('/checkout', [App\Http\Controllers\OrderController::class, 'store'])->name('checkout_cart');
+    Route::get('/view_orders', [App\Http\Controllers\OrderController::class, 'index'])->name('view_orders');
+    Route::get('/order-details/{id}', [App\Http\Controllers\OrderController::class, 'show'])->name('order-details');
 
 });

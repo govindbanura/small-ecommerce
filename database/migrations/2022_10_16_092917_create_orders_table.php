@@ -28,7 +28,7 @@ class CreateOrdersTable extends Migration
             $table->string('state');
             $table->string('pincode');
             $table->tinyInteger('staus')->default(0);
-            $table->string('message')->nullable();
+            $table->string('total_price');
             $table->timestamps();
         });
     }

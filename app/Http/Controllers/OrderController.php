@@ -37,6 +37,23 @@ class OrderController extends Controller
 
     }
 
+    public function index(){
+        $user_id = Auth::id();
+        $items = Order::where('user_id',$user_id)->orderBy('created_at', 'desc')->get();
+        $categories= Category::all();
+        $no_items = $items->count();
+        return view('orders', compact('items', 'categories','no_items'));
+
+    }
+
+    public function show($id){
+        $items = Order::where('id',$id)->where('user_id', Auth::id())->first();
+        $categories= Category::all();
+        $no_items = $items->count();
+        return view('order_details', compact('items', 'categories','no_items'));
+
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -64,11 +81,21 @@ class OrderController extends Controller
         $order->pincode = $request->pincode;
         $order->tracking_id = $this->genTracking();
         $order->user_id = Auth::id();
-        $order->save();
 
         $cartItems = Cart::where('user_id', Auth::id())->get();
+        $total = 0;
         foreach($cartItems as $item){
             if($item->products->sale_price) $price = $item->products->sale_price; else $price = $item->products->regular_price;
+            $final_item_price = $item->product_qty * $price;
+            $total = $total + $final_item_price;
+        }
+        $order->total_price = $total+10;
+        $order->save();
+
+
+        foreach($cartItems as $item){
+            if($item->products->sale_price) $price = $item->products->sale_price; else $price = $item->products->regular_price;
+
             OrderItems::create([
                 'order_id' => $order->id,
                 'product_id' => $item->product_id,
@@ -81,6 +108,6 @@ class OrderController extends Controller
 
         session()->flash('success', 'Order Place Successfully with order id '.$order->tracking_id);
 
-        return redirect()->back();
+        return redirect()->route('view_orders');
     }
 }
