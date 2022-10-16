@@ -48,7 +48,7 @@
                     <div id="product-carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner bg-light">
                             <div class="carousel-item active">
-                                <img class="w-100 h-100" src="{{ URL::secure_asset('img/'.$product->image) }}" alt="Image">
+                                <img class="w-100 h-100" src="{{ URL::asset('img/'.$product->image) }}" alt="Image">
                             </div>
                             @if($product->images)
                                 @php
@@ -56,7 +56,7 @@
                                 @endphp
                                 @foreach ($images as $img)
                                     <div class="carousel-item">
-                                        <img class="w-100 h-100" src="{{ URL::secure_asset('img/'.$img) }}" alt="Image">
+                                        <img class="w-100 h-100" src="{{ URL::asset('img/'.$img) }}" alt="Image">
                                     </div>
                                 @endforeach
                             @endif

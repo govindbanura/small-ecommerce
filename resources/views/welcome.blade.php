@@ -40,7 +40,7 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                     <div class="product-item bg-light mb-4">
                         <div class="product-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ URL::secure_asset('img/'.$product->image) }}" alt="">
+                            <img class="img-fluid w-100" src="{{ URL::asset('img/'.$product->image) }}" alt="">
                         </div>
                         <div class="text-center py-4">
                             <a class="h6 text-decoration-none text-truncate" href="{{route('product',$product->id)}}">{{$product->name}}</a>

@@ -22,7 +22,7 @@
                 </p>
             </div>
             <div class="col-md-6 px-xl-0 text-center text-md-right">
-                <img class="img-fluid" src="{{ URL::secure_asset('img/payments.png')}}" alt="">
+                <img class="img-fluid" src="{{ URL::asset('img/payments.png')}}" alt="">
             </div>
         </div>
     </div>
@@ -34,14 +34,14 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="{{ URL::secure_asset('js/jquery-3.4.1.min.js') }}"></script>
-    <script src="{{ URL::secure_asset('js/bootstrap.bundle.min.js') }} "></script>
-    <script src="{{ URL::secure_asset('lib/easing/easing.min.js') }}"></script>
-    <script src="{{ URL::secure_asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ URL::asset('js/bootstrap.bundle.min.js') }} "></script>
+    <script src="{{ URL::asset('lib/easing/easing.min.js') }}"></script>
+    <script src="{{ URL::asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
     {{-- <!-- Contact Javascript File -->
-    <script src="{{ URL::secure_asset('js/main.js') }} mail/jqBootstrapValidation.min.js"></script>
-    <script src="{{ URL::secure_asset('js/main.js') }} mail/contact.js"></script> --}}
+    <script src="{{ URL::asset('js/main.js') }} mail/jqBootstrapValidation.min.js"></script>
+    <script src="{{ URL::asset('js/main.js') }} mail/contact.js"></script> --}}
 
     <!-- Template Javascript -->
-    <script src="{{ URL::secure_asset('js/main.js') }}"></script>
+    <script src="{{ URL::asset('js/main.js') }}"></script>

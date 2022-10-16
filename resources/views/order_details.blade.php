@@ -103,7 +103,7 @@
                         <tbody class="align-middle">
                             @foreach ($items->orderItems as $item)
                             <tr>
-                                <td class="align-middle"><img src="{{URL::secure_asset('img/'.$item->products->image)}}" alt="" style="width: 50px;">  {{$item->products->name}}</td>
+                                <td class="align-middle"><img src="{{URL::asset('img/'.$item->products->image)}}" alt="" style="width: 50px;">  {{$item->products->name}}</td>
                                 <td class="align-middle"> {{$item->product_qty }}</td>
                                 <td class="align-middle">&#8377; {{$item->product_price}}</td>
                                 <td class="align-middle"> &#8377; {{$item->product_price * $item->product_qty}}</td>
