@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@include('layouts.header')
     <body>
         <!-- Topbar Start -->
         @include('layouts.topbar')
