@@ -41,15 +41,16 @@ class OrderController extends Controller
         $user_id = Auth::id();
         $items = Order::where('user_id',$user_id)->orderBy('created_at', 'desc')->get();
         $categories= Category::all();
-        $no_items = $items->count();
+        $no_items = Cart::all()->where('user_id',$user_id)->count();
         return view('orders', compact('items', 'categories','no_items'));
 
     }
 
     public function show($id){
+        $user_id = Auth::id();
         $items = Order::where('id',$id)->where('user_id', Auth::id())->first();
         $categories= Category::all();
-        $no_items = $items->count();
+        $no_items = Cart::all()->where('user_id',$user_id)->count();
         return view('order_details', compact('items', 'categories','no_items'));
 
     }
