@@ -7,18 +7,16 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <h5 class="text-secondary text-uppercase mb-4">Address</h5>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
-                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>HNo. 15, Bilpar, Silchar, India</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>govindbanura2310@gmail.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+91 708 6581 398</p>
 
             </div>
         </div>
         <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
             <div class="col-md-6 px-xl-0">
                 <p class="mb-md-0 text-center text-md-left text-secondary">
-                    &copy; <a class="text-primary" href="#">Domain</a>. All Rights Reserved. Designed
-                    by
-                    <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+                    &copy; <a class="text-primary" href="#">Domain</a>. All Rights Reserved.
                 </p>
             </div>
             <div class="col-md-6 px-xl-0 text-center text-md-right">
