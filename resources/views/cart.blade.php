@@ -59,7 +59,7 @@
                             @php $total = 0 @endphp
                             @foreach ($cart as $cart_item)
                             <tr>
-                                <td class="align-middle"><img src="{{URL::asset('img/'.$cart_item->products->image)}}" alt="" style="width: 50px;">{{$cart_item->products->name}}</td>
+                                <td class="align-middle"><img src="{{URL::secure_asset('img/'.$cart_item->products->image)}}" alt="" style="width: 50px;">{{$cart_item->products->name}}</td>
                                 @if($cart_item->products->sale_price) @php $price = $cart_item->products->sale_price @endphp @else @php $price = $cart_item->products->regular_price @endphp @endif
                                 <td class="align-middle"> &#8377; {{ $price }}</td>
                                 <td class="align-middle">{{$cart_item->product_qty}}</td>
