@@ -32,12 +32,4 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/placeOrder', [App\Http\Controllers\OrderController::class, 'view_checkout_page'])->name('checkout');
     Route::post('/checkout', [App\Http\Controllers\OrderController::class, 'store'])->name('checkout_cart');
 
-
-
-    Route::post('/member/{id}/update', 'EmployeeController@update')->name('updateemployee');
-    Route::delete('/member/{id}/delete', 'EmployeeController@destroy')->name('deleteemployee');
-    Route::put('/member/{id}/restore', 'EmployeeController@restore')->name('restoreemployee');
-    Route::delete('/member/{id}/deleted', 'EmployeeController@permanentlyDelete')->name('restoreemployee');
-    Route::get('/member/test', 'EmployeeController@genEmp')->name('addemployees');
-
 });
